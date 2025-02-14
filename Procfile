@@ -1,3 +1,3 @@
-worker: python main.py
-clock: python main.py
+worker: python3 main.py
+clock: python3 main.py
 web: gunicorn main:app
