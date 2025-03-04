@@ -1,43 +1,59 @@
-X (Twitter) Auto-Posting Bot
+# Twitter Auto-Posting Bot
 
-This script is an automated X (Twitter) posting bot using Tweepy. It allows you to schedule and post tweets at regular intervals automatically.
+## Overview
+This Python script automates the process of posting tweets at scheduled intervals using the Tweepy library and Twitter API.
 
-Features
+## Features
+- Automatically posts tweets from a predefined list
+- Uses the Twitter API via Tweepy for seamless integration
+- Supports scheduled posting at fixed intervals
+- Handles errors gracefully
 
-Automatically posts tweets from a predefined list
-Uses Tweepy for seamless X API interaction
-Supports interval-based scheduling
-Error handling for smooth operation
-Simple setup and easy customization
+## Requirements
+- Python 3.x
+- Tweepy library
+- Schedule library (optional for advanced scheduling)
+- Twitter Developer Account with API credentials
 
-Prerequisites
-Before running the script, ensure you have:
-Python installed (>=3.6 recommended)
-Tweepy library installed (pip install tweepy)
-Twitter Developer account with API credentials
+## Installation
+1. Clone this repository:
+   ```bash
+   https://github.com/ethical-dilkhush/X-Auto-Posting-Script.git
+   cd X-Auto-Posting-Script
+   ```
 
-Setup
-Clone the repository:
-git clone https://github.com/ethical-dilkhush/twitter-auto-post.git
-cd twitter-auto-post
+2. Install the required dependencies:
+   ```bash
+   pip install tweepy schedule
+   ```
 
-Install dependencies:
-pip install tweepy schedule
-Configure Twitter API credentials:
-Create a developer account on Twitter Developer Portal
-Generate API keys, access tokens, and bearer token
-Replace the placeholders in the script with your actual credentials
+3. Set up your Twitter API credentials in `script.py`:
+   ```python
+   BEARER_TOKEN = 'your_bearer_token_here'
+   API_KEY = 'your_api_key_here'
+   API_SECRET_KEY = 'your_api_secret_here'
+   ACCESS_TOKEN = 'your_access_token_here'
+   ACCESS_TOKEN_SECRET = 'your_access_secret_here'
+   ```
 
-Usage
-Run the script to start auto-posting tweets at a specified interval:
-python auto_post.py
-Configuration
-Modify the tweets_to_post list in the script to customize your tweets
-Adjust interval_seconds to control posting frequency (default: 20 seconds)
-Enhance with additional functionality like logging or error handling if needed
+4. Run the script:
+   ```bash
+   python main.py
+   ```
 
-Disclaimer
-Use this script responsibly and ensure compliance with X's (Twitter's) API policies to avoid rate limits or account restrictions.
+## Configuration
+- Modify the `tweets_to_post` list to include your desired tweets.
+- Adjust the `interval_seconds` parameter in `auto_post()` to control tweet frequency.
+- Use `schedule` for more complex scheduling needs.
 
-License
-This project is licensed under the MIT License.
+## Notes
+- Be mindful of Twitter's rate limits and posting policies.
+- Avoid spamming or violating Twitter's terms to prevent account suspension.
+- Consider adding randomized delays between tweets for a more natural posting pattern.
+
+## License
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## Disclaimer
+This script is for educational purposes only. The author is not responsible for any misuse.
+
